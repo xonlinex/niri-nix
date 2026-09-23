@@ -13,7 +13,7 @@
         $character'';
 
       directory = {
-        format = " [](8) [ $path](purple)";
+        format = "[ > ](8)[ $path](purple)";
         truncation_length = 1;
       };
 
@@ -38,11 +38,11 @@
       };
 
       git_branch = {
-        format = " [](8) [[ ](green)$branch](green)";
+        format = "[ > ](8)[[ ](green)$branch](green)";
       };
 
       git_status = {
-        format = " ([\\[$all_status$ahead_behind\\]]($style)) ";
+        format = " ([\\[$all_status$ahead_behind\\]]($style))";
         style = "red";
         conflicted = "=";
         ahead = "⇡";
@@ -76,7 +76,7 @@
 
       cmd_duration = {
         min_time = 60;
-        format = "[](8) [[󰪢 ](red)$duration](fg:white)";
+        format = "[ > ](8)[[󰪢 ](red)$duration](fg:white)";
         disabled = false;
       };
 
