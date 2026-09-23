@@ -7,24 +7,33 @@
     flags = [ "--disable-up-arrow" ];
 
     themes = {
-      cendre = {
-        theme.name = "cendre";
+      rose-pine = {
+        theme.name = "rose-pine";
         colors = {
-          AlertInfo = "#43b16a";
-          AlertWarn = "#fcba81";
-          AlertError = "#d25780";
-          Annotation = "#8bcfff";
-          Base = "#e6d5c2";
-          Guidance = "#a09384";
-          Important = "#ea9875";
-          Title = "#9480ba";
+        AlertInfo = "#9ccfd8";
+        AlertWarn = "#f6c177";
+        AlertError = "#eb6f92";
+
+        Annotation = "#908caa";
+        Base = "#e0def4";
+        Guidance = "#908caa";
+        Important = "#ebbcba";
+        Title = "#c4a7e7";
+        Muted = "#6e6a86";
+
+        SyntaxCommand = "#31748f";
+        SyntaxFlag = "#c4a7e7";
+        SyntaxString = "#f6c177";
+        SyntaxVariable = "#ebbcba";
+        SyntaxOperator = "#908caa";
+        SyntaxComment = "#6e6a86";
         };
       };
     };
 
     settings = {
       style = "full";
-      theme.name = "cendre";
+      theme.name = "rose-pine";
     };
   };
 }

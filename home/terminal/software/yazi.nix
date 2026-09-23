@@ -6,9 +6,6 @@
     enableFishIntegration = true;
 
     settings = {
-      opener.edit = [
-        { run = ''nvim "$@"''; block = true; }
-      ];
       tasks.image_bound = [ 20000 20000 ];
     };
 

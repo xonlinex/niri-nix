@@ -5,7 +5,7 @@
     enable = true;
 
     defaultApplications = {
-      # Navegador web (Zen Browser)
+      # Browser (Zen Browser)
       "x-scheme-handler/http" = [ "zen-beta.desktop" ];
       "x-scheme-handler/https" = [ "zen-beta.desktop" ];
       "x-scheme-handler/chrome" = [ "zen-beta.desktop" ];
@@ -20,7 +20,7 @@
       # Discord / Vesktop
       "x-scheme-handler/discord" = [ "vesktop.desktop" ];
 
-      # Reproductor de video principal (MPV)
+      # Video Multiplayer (MPV)
       "video/mp4" = [ "mpv.desktop" ];
       "video/mkv" = [ "mpv.desktop" ];
       "video/x-matroska" = [ "mpv.desktop" ];
@@ -33,14 +33,14 @@
       "video/3gpp" = [ "mpv.desktop" ];
       "video/x-flv" = [ "mpv.desktop" ];
 
-      # Visor de documentos (Evince)
+      # Documents (Evince)
       "application/pdf" = [ "org.gnome.Evince.desktop" ];
       "application/postscript" = [ "org.gnome.Evince.desktop" ];
       "application/x-cbz" = [ "org.gnome.Evince.desktop" ]; # Cómics / Manga
       "application/x-cbr" = [ "org.gnome.Evince.desktop" ];
       "image/vnd.djvu" = [ "org.gnome.Evince.desktop" ];
 
-      # Visor de imágenes por defecto (Loupe)
+      # Images (Loupe)
       "image/png" = [ "org.gnome.Loupe.desktop" ];
       "image/jpeg" = [ "org.gnome.Loupe.desktop" ];
       "image/webp" = [ "org.gnome.Loupe.desktop" ];

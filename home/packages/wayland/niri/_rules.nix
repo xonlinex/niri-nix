@@ -1,6 +1,5 @@
 {
   window-rule = [
-    # Regla 1: Aplicaciones maximizadas al abrir
     {
       match = [
         { _props = { app-id = "zen"; }; }
@@ -11,13 +10,11 @@
       open-maximized = true;
     }
 
-    # Regla 2: Opacidad para Nautilus y G4Music
     {
       match._props = { app-id = "com.github.neithern.g4music|org.gnome.Nautilus"; };
       opacity = 1.0;
     }
 
-    # Regla 3: Diálogos de archivo flotantes en Nautilus
     {
       match._props = {
         app-id = "org.gnome.Nautilus";

@@ -23,10 +23,10 @@
         default = {
           font_family = "Outfit";
           font_weight = 400;
-          background_opacity = 0.90;
+          background_opacity = 0.8;
           capsule = true;
-          capsule_fill = "primary";
-          capsule_opacity = 0.05;
+          capsule_fill = "surface_variant";
+          capsule_opacity = 1.0;
           capsule_padding = 10.0;
           capsule_radius = 20;
           capsule_thickness = 0.7;
@@ -35,31 +35,28 @@
           margin_ends = 0;
           padding = 10;
           position = "top";
-          radius = 0;
+          radius = 16;
           shadow = false;
           widget_spacing = 5;
-
-          start = [ "launcher" "workspaces" "active_window" ];
-          center = [ ];
+          start = [ "launcher" "workspaces" "taskbar" "active_window" ];
+          center = [ "clock" ];
           end = [
             "media"
             "tray"
             "keyboard_layout"
             "privacy"
             "group:g1"
-            "clock"
             "volume"
             "notifications"
             "control-center"
           ];
-
           capsule_group = [
             {
               id = "g1";
               enabled = true;
-              fill = "primary";
+              fill = "surface_variant";
               members = [ "cpu" "ram" "sysmon" ];
-              opacity = 0.05;
+              opacity = 1.0;
               padding = 12.0;
               radius = 20.0;
             }
@@ -99,13 +96,13 @@
       };
 
       notification = {
-        background_opacity = 0.85;
+        background_opacity = 0.9;
         max_visible = 3;
         offset_y = 20;
       };
 
       osd = {
-        background_opacity = 0.90;
+        background_opacity = 0.9;
         offset_x = 0;
         offset_y = 20;
         position = "bottom_center";
@@ -117,22 +114,17 @@
         corner_radius_scale = 1.0;
         font_family = "Outfit";
         panel = {
-          control_center_placement = "floating";
+          control_center_placement = "attached";
           control_center_position = "auto";
           open_near_click_control_center = true;
           shadow = true;
-          # BUG: no save folder wallpaper
-          # directory = "~/Pictures/Wallpapers";
-          # directory_light = "~/Pictures/Wallpapers";
-          # directory_dark = "~/Pictures/Wallpapers";
           launcher_position = "top_left";
           transparency_mode = "glass";
-          wallpaper_placement = "floating";
-          wallpaper_position = "center";
+          wallpaper_placement = "attached";
         };
         screen_corners = {
-          enabled = false;
-          size = 0;
+          enabled = true;
+          size = 32;
         };
         shadow = {
           direction = "center";
@@ -142,10 +134,10 @@
       theme = {
         mode = "dark";
         source = "wallpaper";
-        wallpaper_scheme = "m3-tonal-spot";
+        wallpaper_scheme = "m3-content";
         templates = {
           builtin_ids = [ "gtk3" "gtk4" "niri" ];
-          community_ids = [ "discord" "vicinae" "zen-browser" ];
+          community_ids = [ "discord" "vicinae" "zen-browser" "papirus-icons" ];
         };
       };
 
@@ -156,16 +148,17 @@
 
       widget = {
         active_window = {
-          display = "icon_and_text";
+          display = "text_only";
           max_length = 300;
         };
         clock = {
           capsule = true;
-          format = " {:%d %b, %H:%M}";
+          format = "{:%I:%M %p} │ {:%a, %d %b}";
         };
         control-center = {
           capsule = true;
           capsule_padding = 4;
+          # capsule_fill = "primary";
           # capsule_radius = 20;
           custom_image = "/home/xonlinex/Pictures/avatar-rounded.png";
           scale = 1.5;
@@ -200,14 +193,15 @@
           visualization = "none";
         };
         taskbar = {
-          inactive_opacity = 0.7;
+          inactive_opacity = 0.5;
           only_active_workspace = true;
           show_active_indicator = false;
         };
         workspaces = {
-          active_pill_size = 2.0;
+          active_pill_size = 2.5;
           empty_color = "secondary";
-          show_labels = true;
+          pill_scale = 0.7;
+          show_labels = false;
           style = "regular";
         };
       };

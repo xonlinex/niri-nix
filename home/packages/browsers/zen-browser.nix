@@ -1,5 +1,10 @@
 { pkgs, inputs, config, ... }:
+
 {
+  imports = [
+    inputs.zen-browser.homeModules.default
+  ];
+
   programs.zen-browser = {
     enable = true;
 

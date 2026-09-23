@@ -13,6 +13,7 @@
       cat = "bat";
       z = "zoxide";
       ff = "fastfetch";
+      ss = "sesh connect (sesh list | fzf)";
     };
 
     shellAbbrs = {

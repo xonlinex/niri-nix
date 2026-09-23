@@ -15,11 +15,11 @@
       theme = {
         dark = {
           name = "noctalia";
-            icon_theme = "auto";
+          icon_theme = "Papirus";
         };
         light = {
           name = "noctalia";
-          icon_theme = "auto";
+          icon_theme = "Papirus";
         };
       };
       font = {
@@ -31,7 +31,7 @@
 
       launcher_window = {
         rounding = 10;
-        opacity = 0.85;
+        opacity = 0.9;
 
         client_side_decorations = {
           enabled = true;

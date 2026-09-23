@@ -4,27 +4,49 @@
   programs.lazygit = {
     enable = true;
 
+    # Lazygit configuration settings
     settings = {
       gui = {
-        nerdFontsVersion = "3";
-
         theme = {
-          activeBorderColor = [ "#ea9875" "bold" ];
-          inactiveBorderColor = [ "#73665b" ];
-          searchingActiveBorderColor = [ "#fcba81" "bold" ];
-          optionsTextColor = [ "#ea9875" ];
-
-          selectedLineBgColor = [ "#2a2422" ];
-          inactiveViewSelectedLineBgColor = [ "#201b19" ];
-
-          cherryPickedCommitFgColor = [ "#171311" ];
-          cherryPickedCommitBgColor = [ "#ea9875" ];
-
-          markedBaseCommitFgColor = [ "#171311" ];
-          markedBaseCommitBgColor = [ "#fcba81" ];
-
-          unstagedChangesColor = [ "#d25780" ];
-          defaultFgColor = [ "#e6d5c2" ];
+          activeBorderColor = [
+            "#31748f"
+            "bold"
+          ];
+          inactiveBorderColor = [
+            "#6e6a86"
+          ];
+          searchingActiveBorderColor = [
+            "#ebbcba"
+            "bold"
+          ];
+          optionsTextColor = [
+            "#9ccfd8"
+          ];
+          selectedLineBgColor = [
+            "#31748f"
+          ];
+          inactiveViewSelectedLineBgColor = [
+            "#26233a"
+            "bold"
+          ];
+          cherryPickedCommitFgColor = [
+            "#1f1d2e"
+          ];
+          cherryPickedCommitBgColor = [
+            "#ebbcba"
+          ];
+          markedBaseCommitFgColor = [
+            "#9ccfd8"
+          ];
+          markedBaseCommitBgColor = [
+            "#f6c177"
+          ];
+          unstagedChangesColor = [
+            "#eb6f92"
+          ];
+          defaultFgColor = [
+            "#e0def4"
+          ];
         };
       };
     };

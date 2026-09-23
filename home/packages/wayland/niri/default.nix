@@ -10,7 +10,6 @@ let
   autostart = import ./_autostart.nix;
   noctalia-settings = import ../desktop-shell/noctalia/_setttings-niri.nix;
 
-  # Función para fusionar attrsets que concatena las listas automáticamente
   combineConfigs = lib.zipAttrsWith (name: values:
     if builtins.isList (builtins.head values)
     then lib.concatLists values

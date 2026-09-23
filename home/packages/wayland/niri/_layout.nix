@@ -15,7 +15,7 @@
     passes = 3;
     offset = 3.0;
     noise = 0.03;
-    saturation = 1.5;
+    saturation = 1.0;
   };
 
   layout = {

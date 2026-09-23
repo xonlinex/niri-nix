@@ -35,7 +35,7 @@
     };
 
 
-    # Teclas multimedia y volumen
+    # Multimedia & Volumen
     "F12" = {
       _props = { allow-when-locked = true; };
       spawn-sh = "noctalia msg volume-up";

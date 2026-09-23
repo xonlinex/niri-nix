@@ -18,6 +18,8 @@
     openssh
     unzip
     duf
+    sesh
+    inshellisense
   ];
 
   imports = [

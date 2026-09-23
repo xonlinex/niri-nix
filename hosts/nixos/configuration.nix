@@ -2,24 +2,20 @@
 
 {
   imports = [
-    ./hardware-configuration.nix
+    ./hardware.nix
+    ./displaymanager.nix
   ];
 
   boot = {
-    # 1. Utilizar el kernel más reciente
     kernelPackages = pkgs.linuxPackages_latest;
 
-    # 2. Configuración unificada del Bootloader
     loader = {
       efi.canTouchEfiVariables = true;
       timeout = 10;
 
       systemd-boot = {
         enable = true;
-        configurationLimit = 15;
-
-        # Renderizar la interfaz a la máxima resolución disponible en UEFI
-        consoleMode = "max";
+        configurationLimit = 50;
       };
     };
   };
@@ -34,23 +30,11 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
+  # Timezone.
   time.timeZone = "America/La_Paz";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "es_BO.UTF-8";
-    LC_IDENTIFICATION = "es_BO.UTF-8";
-    LC_MEASUREMENT = "es_BO.UTF-8";
-    LC_MONETARY = "es_BO.UTF-8";
-    LC_NAME = "es_BO.UTF-8";
-    LC_NUMERIC = "es_BO.UTF-8";
-    LC_PAPER = "es_BO.UTF-8";
-    LC_TELEPHONE = "es_BO.UTF-8";
-    LC_TIME = "es_BO.UTF-8";
-  };
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -58,18 +42,17 @@
     variant = "";
   };
 
-  # En tu módulo de NixOS:
+  # usb
   services.gvfs.enable = true;
 
   # Habilitar gestión de ratón y touchpad
-  services.libinput.enable = true;
+  # services.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users."xonlinex" = {
     isNormalUser = true;
     description = "xOnlinEx";
     extraGroups = [ "networkmanager" "wheel" "docker"];
-    packages = with pkgs; [];
     shell = pkgs.fish;
   };
 
@@ -82,6 +65,10 @@
     brightnessctl
   ];
 
+  # environment.variables = {
+  #   EDITOR = "nvim";
+  #   VISUAL = "nvim";
+  # };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -91,10 +78,10 @@
   #   enableSSHSupport = true;
   # };
   programs.niri.enable = true;
-  # programs.hyprland.enable = true;
   programs.fish.enable = true;
   programs.dconf.enable = true;
   virtualisation.docker.enable = true;
+  # programs.hyprland.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
@@ -117,20 +104,6 @@
 	  enable = true;
     wayland.enable = true;
   };
-  # services.displayManager.defaultSession = "hyprland";
-
-  # theme sddm
-  # programs.qylock = {
-  #   enable = true;
-  #   theme = "clockwork/orbital";
-  #   themeOptions = {
-  #     clockwork.orbital = {
-  #       themeMode = "dark";
-  #       enableWindup = false;
-  #     };
-  #   };
-  # };
-
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

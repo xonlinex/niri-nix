@@ -4,7 +4,6 @@
   ...
 }:
 {
-  # FIX: Verify if Noctalia created the directories before running this
   home.file.".config/noctalia/toggle-theme.sh" = {
     executable = true;
     text = ''

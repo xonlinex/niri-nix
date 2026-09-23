@@ -11,6 +11,7 @@
     loupe
     nautilus
     papers
+    qbittorrent
     # Software for Programming
     dbeaver-bin
     postman
