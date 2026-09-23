@@ -42,7 +42,7 @@
       };
 
       git_status = {
-        format = " ([\\[$all_status$ahead_behind\\]]($style))";
+        format = " ([\\[$all_status$ahead_behind\\]]($style)) ";
         style = "red";
         conflicted = "=";
         ahead = "⇡";
@@ -76,7 +76,7 @@
 
       cmd_duration = {
         min_time = 60;
-        format = " [](8) [[󰪢 ](red)$duration](fg:white)";
+        format = "[](8) [[󰪢 ](red)$duration](fg:white)";
         disabled = false;
       };
 
