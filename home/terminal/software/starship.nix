@@ -7,26 +7,23 @@
 
     settings = {
       add_newline = false;
+      # scan_timeout = 5;
+      # command_timeout = 500;
 
       format = ''
-        $os$username[@](blue)$hostname$directory$git_branch$git_status$java$python$package$cmd_duration
+        [╭─](bold 8) $directory$git_branch$git_status$cmd_duration$nix_shell
         $character'';
 
-      directory = {
-        format = "[ > ](8)[ $path](purple)";
-        truncation_length = 1;
-      };
-
-      username = {
-        format = "[$user](blue)";
-        show_always = true;
-      };
-
-      hostname = {
-        ssh_only = false;
-        format = "[$hostname](blue)";
-      };
-
+      # status = {
+      #   disabled = false;
+      #   format = "[$symbol](bold $style) ";
+      #   symbol = "│";
+      #   success_symbol = "[│](bold white)";
+      #   style = "red";
+      #   map_symbol = false;
+      #   recognize_signal_code = false;
+      #   pipestatus = false;
+      # };
       os = {
         format = "[$symbol ](blue)";
         disabled = false;
@@ -37,55 +34,76 @@
         };
       };
 
+      character = {
+        format = ''[╰─$symbol](8) '';
+        success_symbol = "[](green)";
+        error_symbol = "[](red)";
+        vicmd_symbol = "[V](green bold)";
+        vimcmd_replace_one_symbol = "[R](red bold)";
+        vimcmd_visual_symbol = "[V](yellow bold)";
+      };
+
+      jobs.disabled = true;
+
+      username = {
+        format = "[$user]($style)@";
+        style_user = "bold blue";
+        show_always = true;
+      };
+
+      hostname = {
+        format = "[$hostname]($style) ";
+        style = "bold blue";
+        ssh_only = false;
+      };
+
+      directory = {
+        format = "[$path]($style) ";
+        style = "bold blue";
+        truncation_length = 2;
+        truncation_symbol = "";
+        home_symbol = "~";
+        # repo_root_format = "[$repo_root]($repo_root_style)";
+        # repo_root_style = "bold white";
+      };
+
       git_branch = {
-        format = "[ > ](8)[[ ](green)$branch](green)";
+        format = "[on ](white)[ $branch]($style)";
+        style = "green";
+        symbol = "";
       };
 
       git_status = {
         format = " ([\\[$all_status$ahead_behind\\]]($style)) ";
         style = "red";
         conflicted = "=";
-        ahead = "⇡";
-        behind = "⇣";
-        diverged = "⇕";
+        ahead = "↑";
+        behind = "↓";
+        diverged = "↕";
         up_to_date = "";
         untracked = "?";
-        stashed = "$";
+        stashed = "";
         modified = "!";
         staged = "+";
         renamed = "»";
-        deleted = "X";
-      };
-
-      # java = {
-      #   format = " [/](8) [${symbol}(${version})](red)";
-      #   symbol = " ";
-      #   version_format = "v\${raw}";
-      # };
-
-      python = {
-        format = " [](8) [\${symbol}\${pyenv_prefix}(\${version} )(\\\(\$virtualenv\\\) )]($style)";
-        version_format = "v\${raw}";
-        symbol = " ";
-        style = "yellow";
-      };
-
-      package = {
-        format = " [](8) [ $version](yellow)";
+        deleted = "x";
       };
 
       cmd_duration = {
-        min_time = 60;
-        format = "[> ](8)[[󰪢 ](red)$duration](fg:white)";
-        disabled = false;
+        format = "[took ](white)[$duration]($style)";
+        style = "yellow";
+        min_time = 2000;
+        show_milliseconds = true;
       };
 
-      character = {
-        success_symbol = "[󰅂](green)";
-        error_symbol = "[󰅂](red)";
-        vicmd_symbol = "[V](green bold)";
-        vimcmd_replace_one_symbol = "[R](red bold)";
-        vimcmd_visual_symbol = "[V](yellow bold)";
+      nix_shell = {
+        disabled = false;
+        heuristic = false;
+        format = " [nix]($style)";
+        style = "bold blue";
+        impure_msg = "";
+        pure_msg = "";
+        unknown_msg = "";
       };
     };
   };

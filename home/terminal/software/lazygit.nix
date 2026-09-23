@@ -4,48 +4,44 @@
   programs.lazygit = {
     enable = true;
 
-    # Lazygit configuration settings
     settings = {
       gui = {
+        nerdFontsVersion = "3";
         theme = {
           activeBorderColor = [
-            "#31748f"
+            "#ff9e64"
             "bold"
           ];
           inactiveBorderColor = [
-            "#6e6a86"
+            "#27a1b9"
           ];
           searchingActiveBorderColor = [
-            "#ebbcba"
+            "#ff9e64"
             "bold"
           ];
           optionsTextColor = [
-            "#9ccfd8"
+            "#7aa2f7"
           ];
           selectedLineBgColor = [
-            "#31748f"
-          ];
-          inactiveViewSelectedLineBgColor = [
-            "#26233a"
-            "bold"
+            "#283457"
           ];
           cherryPickedCommitFgColor = [
-            "#1f1d2e"
+            "#7aa2f7"
           ];
           cherryPickedCommitBgColor = [
-            "#ebbcba"
+            "#bb9af7"
           ];
           markedBaseCommitFgColor = [
-            "#9ccfd8"
+            "#7aa2f7"
           ];
           markedBaseCommitBgColor = [
-            "#f6c177"
+            "#e0af68"
           ];
           unstagedChangesColor = [
-            "#eb6f92"
+            "#db4b4b"
           ];
           defaultFgColor = [
-            "#e0def4"
+            "#c0caf5"
           ];
         };
       };
