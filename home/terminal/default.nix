@@ -19,7 +19,8 @@
     unzip
     duf
     sesh
-    inshellisense
+    # inshellisense
+    git
   ];
 
   imports = [

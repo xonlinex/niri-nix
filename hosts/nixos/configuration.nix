@@ -4,6 +4,7 @@
   imports = [
     ./hardware.nix
     ./displaymanager.nix
+    ./nix-ld.nix
   ];
 
   boot = {
@@ -80,6 +81,7 @@
   programs.niri.enable = true;
   programs.fish.enable = true;
   programs.dconf.enable = true;
+
   virtualisation.docker.enable = true;
   # programs.hyprland.enable = true;
 

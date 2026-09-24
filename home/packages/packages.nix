@@ -2,29 +2,32 @@
 
 {
   home.packages = with pkgs; [
+    # apps
     gapless
-    wl-clipboard
-    cliphist
-    wl-clip-persist
-    libnotify
     vesktop
-    loupe
     nautilus
+    loupe
     papers
     qbittorrent
+
+    # utilities
+    wl-clipboard
+    wl-clip-persist
+    cliphist
+    libnotify
+    xwayland-satellite
+
     # Software for Programming
     dbeaver-bin
     postman
     neovim
-    fastfetch
     ghostty
-    git
-    nodejs
-    openjdk21
+    mise
+    # nodejs
+    # openjdk21
     python3
-    maven
-    cargo
+    # maven
+    # cargo
     #x11
-    xwayland-satellite
   ];
 }

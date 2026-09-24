@@ -60,7 +60,7 @@
       directory = {
         format = "[$path]($style) ";
         style = "bold blue";
-        truncation_length = 2;
+        truncation_length = 1;
         truncation_symbol = "";
         home_symbol = "~";
         # repo_root_format = "[$repo_root]($repo_root_style)";

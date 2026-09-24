@@ -38,148 +38,158 @@
     };
 
     theme = {
+      # tokyonight
       mgr = {
-        cwd = { fg = "#ea9875"; };
+        cwd = { fg = "#a9b1d6"; italic = true; };
 
-        find_keyword  = { fg = "#fcba81"; bold = true; };
-        find_position = { fg = "#ea9875"; italic = true; };
+        hovered = { bg = "#292e42"; };
+        preview_hovered = { bg = "#292e42"; };
 
-        symlink_target = { fg = "#a09384"; italic = true; };
+        find_keyword = { fg = "#16161e"; bg = "#ff9e64"; bold = true; };
+        find_position = { fg = "#0db9d7"; bg = "#192b38"; bold = true; };
 
-        marker_copied   = { fg = "#43b16a"; bg = "#43b16a"; };
-        marker_cut      = { fg = "#d25780"; bg = "#d25780"; };
-        marker_marked   = { fg = "#58bdff"; bg = "#58bdff"; };
-        marker_selected = { fg = "#ea9875"; bg = "#ea9875"; };
+        marker_copied = { fg = "#9ece6a"; bg = "#9ece6a"; };
+        marker_cut = { fg = "#f7768e"; bg = "#f7768e"; };
+        marker_marked = { fg = "#bb9af7"; bg = "#bb9af7"; };
+        marker_selected = { fg = "#7aa2f7"; bg = "#7aa2f7"; };
 
-        count_copied   = { fg = "#171311"; bg = "#43b16a"; };
-        count_cut      = { fg = "#171311"; bg = "#d25780"; };
-        count_selected = { fg = "#171311"; bg = "#ea9875"; };
+        count_copied = { fg = "#16161e"; bg = "#9ece6a"; };
+        count_cut = { fg = "#16161e"; bg = "#f7768e"; };
+        count_selected = { fg = "#16161e"; bg = "#7aa2f7"; };
 
-        border_style = { fg = "#362f2c"; };
+        border_symbol = "│";
+        border_style = { fg = "#27a1b9"; };
       };
 
       tabs = {
-        active   = { fg = "#171311"; bg = "#ea9875"; bold = true; };
-        inactive = { fg = "#a09384"; bg = "#201b19"; };
+        active = { fg = "#15161e"; bg = "#7aa2f7"; };
+        inactive = { fg = "#7aa2f7"; bg = "#3b4261"; };
       };
 
       mode = {
-        normal_main = { fg = "#171311"; bg = "#ea9875"; bold = true; };
-        normal_alt  = { fg = "#ea9875"; bg = "#2a2422"; };
+        normal_main = { fg = "#15161e"; bg = "#7aa2f7"; bold = true; };
+        normal_alt = { fg = "#7aa2f7"; bg = "#3b4261"; };
 
-        select_main = { fg = "#171311"; bg = "#58bdff"; bold = true; };
-        select_alt  = { fg = "#58bdff"; bg = "#2a2422"; };
+        select_main = { fg = "#15161e"; bg = "#bb9af7"; bold = true; };
+        select_alt = { fg = "#bb9af7"; bg = "#3b4261"; };
 
-        unset_main = { fg = "#171311"; bg = "#f4a21c"; bold = true; };
-        unset_alt  = { fg = "#f4a21c"; bg = "#2a2422"; };
-      };
-
-      indicator = {
-        parent  = { bg = "#201b19"; };
-        current = { bg = "#201b19"; };
-        preview = { bg = "#201b19"; };
+        unset_main = { fg = "#15161e"; bg = "#9d7cd8"; bold = true; };
+        unset_alt = { fg = "#9d7cd8"; bg = "#3b4261"; };
       };
 
       status = {
-        overall = { fg = "#e6d5c2"; bg = "#2a2422"; };
+        overall = { fg = "#c0caf5"; bg = "#16161e"; };
+        sep_left = { open = ""; close = ""; };
+        sep_right = { open = ""; close = ""; };
 
-        perm_sep   = { fg = "#4e4641"; };
-        perm_type  = { fg = "#4e89a2"; };
-        perm_read  = { fg = "#fcba81"; };
-        perm_write = { fg = "#d25780"; };
-        perm_exec  = { fg = "#99af6b"; };
+        progress_label = { fg = "#c0caf5"; bold = true; };
+        progress_normal = { fg = "#3d59a1"; bg = "#292e42"; };
+        progress_error = { fg = "#db4b4b"; bg = "#292e42"; };
 
-        progress_label  = { fg = "#e6d5c2"; bold = true; };
-        progress_normal = { fg = "#ea9875"; bg = "#2a2422"; };
-        progress_error  = { fg = "#171311"; bg = "#d25780"; };
-      };
-
-      which = {
-        mask = { bg = "#0f0c0a"; };
-        cand = { fg = "#ea9875"; };
-        rest = { fg = "#73665b"; };
-        desc = { fg = "#a09384"; };
-        separator_style = { fg = "#362f2c"; };
-      };
-
-      confirm = {
-        border = { fg = "#362f2c"; };
-        title  = { fg = "#ea9875"; };
-        body   = { fg = "#e6d5c2"; };
-        list   = { fg = "#a09384"; };
-
-        btn_yes = { fg = "#171311"; bg = "#ea9875"; bold = true; };
-        btn_no  = { fg = "#a09384"; };
-      };
-
-      spot = {
-        border = { fg = "#362f2c"; };
-        title  = { fg = "#ea9875"; };
-
-        tbl_col  = { fg = "#4e89a2"; };
-        tbl_cell = { fg = "#171311"; bg = "#ea9875"; };
-      };
-
-      notify = {
-        title_info  = { fg = "#58bdff"; };
-        title_warn  = { fg = "#f4a21c"; };
-        title_error = { fg = "#d25780"; };
+        perm_type = { fg = "#7aa2f7"; };
+        perm_read = { fg = "#e0af68"; };
+        perm_write = { fg = "#f7768e"; };
+        perm_exec = { fg = "#9ece6a"; };
+        perm_sep = { fg = "#414868"; };
       };
 
       pick = {
-        border   = { fg = "#362f2c"; };
-        active   = { fg = "#ea9875"; bold = true; };
-        inactive = { fg = "#a09384"; };
+        border = { fg = "#27a1b9"; };
+        active = { fg = "#c0caf5"; bg = "#283457"; };
+        inactive = { fg = "#c0caf5"; };
       };
 
       input = {
-        border   = { fg = "#362f2c"; };
-        title    = { fg = "#ea9875"; };
-        value    = { fg = "#e6d5c2"; };
-        selected = { bg = "#2f1e17"; };
+        border = { fg = "#0db9d7"; };
+        title = { fg = "#0db9d7"; };
+        value = { fg = "#9d7cd8"; };
+        selected = { bg = "#283457"; };
       };
 
       cmp = {
-        border   = { fg = "#362f2c"; };
-        active   = { fg = "#171311"; bg = "#ea9875"; };
-        inactive = { fg = "#a09384"; };
+        border = { fg = "#0db9d7"; };
+        active = { fg = "#c0caf5"; bg = "#343a55"; };
+        inactive = { fg = "#c0caf5"; };
+
+        icon_file = "";
+        icon_folder = "";
+        icon_command = "";
       };
 
       tasks = {
-        border  = { fg = "#362f2c"; };
-        title   = { fg = "#ea9875"; };
-        hovered = { fg = "#ea9875"; bold = true; };
+        border = { fg = "#27a1b9"; };
+        title = { fg = "#27a1b9"; };
+        hovered = { fg = "#c0caf5"; bg = "#283457"; };
+      };
+
+      which = {
+        cols = 3;
+        mask = { bg = "#16161e"; };
+        cand = { fg = "#7dcfff"; };
+        rest = { fg = "#7aa2f7"; };
+        desc = { fg = "#bb9af7"; };
+        separator = " ➜ ";
+        separator_style = { fg = "#565f89"; };
+      };
+
+      confirm = {
+        border = { fg = "#0db9d7"; };
+        title = { fg = "#27a1b9"; };
+        content = {};
+        list = {};
+        btn_yes = { bg = "#283457"; };
+        btn_no = {};
+        btn_labels = [ "  [Y]es  " "  (N)o  " ];
+      };
+
+      spot = {
+        border = { fg = "#27a1b9"; };
+        title = { fg = "#27a1b9"; };
+      };
+
+      notify = {
+        title_info = { fg = "#0db9d7"; };
+        title_warn = { fg = "#e0af68"; };
+        title_error = { fg = "#db4b4b"; };
+
+        icon_error = "";
+        icon_warn = "";
+        icon_info = "";
       };
 
       help = {
-        on   = { fg = "#ea9875"; };
-        run  = { fg = "#fcba81"; };
-        desc = { fg = "#a09384"; };
-
-        hovered = { bg = "#201b19"; bold = true; };
-        footer  = { fg = "#a09384"; bg = "#201b19"; };
+        on = { fg = "#9ece6a"; };
+        run = { fg = "#bb9af7"; };
+        desc = { fg = "#7dcfff"; };
+        hovered = { bg = "#292e42"; };
+        footer = { fg = "#c0caf5"; bg = "#1a1b26"; };
       };
 
-      filetype.rules = [
-        # Image
-        { mime = "image/*"; fg = "#fcba81"; }
-        # Media
-        { mime = "{audio,video}/*"; fg = "#9480ba"; }
-        # Archive
-        { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}"; fg = "#d1766e"; }
-        # Document
-        { mime = "application/{pdf,doc,rtf}"; fg = "#4e89a2"; }
-        # Virtual file system
-        { mime = "vfs/{absent,stale}"; fg = "#73665b"; }
-        # Broken link, and a file yazi could not read
-        { url = "*"; is = "orphan"; bg = "#d25780"; }
-        { url = "*"; is = "dummy"; bg = "#d25780"; }
-        { url = "*/"; is = "dummy"; bg = "#d25780"; }
-        # Executable
-        { url = "*"; is = "exec"; fg = "#99af6b"; }
-        # Directory, last so the globs above win
-        { url = "*/"; fg = "#ea9875"; }
-      ];
+      # FIX:
+      # filetype = {
+      #   rules = [
+      #     # Images
+      #     { mime = "image/*"; fg = "#e0af68"; }
+      #
+      #     # Media
+      #     { mime = "{audio,video}/*"; fg = "#bb9af7"; }
+      #
+      #     # Archives
+      #     { mime = "application/*zip"; fg = "#f7768e"; }
+      #     { mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}"; fg = "#f7768e"; }
+      #
+      #     # Documents
+      #     { mime = "application/{pdf,doc,rtf,vnd.*}"; fg = "#7dcfff"; }
+      #
+      #     # Special files (requieren name = "*" explicitamente para no fallar la validación)
+      #     { name = "*"; is = "orphan"; bg = "#f7768e"; }
+      #     { name = "*"; is = "exec"; fg = "#9ece6a"; }
+      #
+      #     # Fallback
+      #     { name = "*/"; fg = "#7aa2f7"; }
+      #     { name = "*"; fg = "#c0caf5"; }
+      #   ];
+      # };
     };
   };
 }
