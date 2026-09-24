@@ -15,18 +15,17 @@
       {
         plugin = resurrect;
         extraConfig = ''
-          set -g @resurrect-dir '~/.config/tmux/resurrect'
+          set -g @resurrect-strategy-vim 'session'
           set -g @resurrect-strategy-nvim 'session'
           set -g @resurrect-capture-pane-contents 'on'
-
-          # set -g @resurrect-hook-post-save-all 'target=$(readlink -f ~/.tmux/resurrect/last); sed "s| --cmd .*-vim-pack-dir||g; s|/etc/profiles/per-user/''${USER}/bin/||g; s|/home/''${USER}/.nix-profile/bin/||g" ''${target} | sponge ''${target}'
         '';
       }
       {
         plugin = continuum;
         extraConfig = ''
           set -g @continuum-restore 'on'
-          set -g @continuum-save-interval '15'
+          set -g @continuum-boot 'on'
+          set -g @continuum-save-interval '10'
         '';
       }
     ];

@@ -4,7 +4,6 @@
   imports = [
     ./hardware.nix
     ./displaymanager.nix
-    ./nix-ld.nix
   ];
 
   boot = {

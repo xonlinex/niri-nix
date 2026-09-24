@@ -22,10 +22,9 @@
     postman
     neovim
     ghostty
-    mise
     # nodejs
     # openjdk21
-    python3
+    # python3
     # maven
     # cargo
     #x11
